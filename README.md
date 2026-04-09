@@ -102,3 +102,113 @@ A compact IoT-based display system built using ESP32 that shows real-time temper
    Upload code to ESP32
 4. Connect hardware as per wiring
 5. Power the device
+
+## 🔌 Full Hardware Connections (ESP32 IoT Display)
+
+### 🧠 ESP32 DevKit V1 Pin Mapping
+
+-----------------------------------
+🔹 OLED Display (I2C - SSD1306)
+-----------------------------------
+VCC  →  3.3V  
+GND  →  GND  
+SDA  →  GPIO 21  
+SCL  →  GPIO 22  
+
+-----------------------------------
+🌡️ DHT11 Temperature Sensor
+-----------------------------------
+VCC  →  3.3V  
+GND  →  GND  
+DATA →  GPIO 4  
+
+(Note: Add 10k pull-up resistor between DATA and VCC if not prebuilt)
+
+-----------------------------------
+🔔 Buzzer
+-----------------------------------
+Positive (+) → GPIO 2  
+Negative (-) → GND  
+
+-----------------------------------
+🔋 Power Supply Options
+-----------------------------------
+
+Option 1: USB Power  
+→ Directly power ESP32 via USB cable  
+
+Option 2: 3.7V Li-ion Battery  
+
+Battery (+) → TP4056 B+  
+Battery (-) → TP4056 B-  
+
+TP4056 OUT+ → ESP32 5V (VIN)  
+TP4056 OUT- → ESP32 GND  
+
+(Recommended: Use a boost converter if voltage drops under load)
+
+-----------------------------------
+⚠️ Important Notes
+-----------------------------------
+• All components must share a COMMON GND  
+• Use 3.3V (NOT 5V) for OLED and DHT11  
+• ESP32 GPIO pins are 3.3V logic  
+• Ensure stable power supply for WiFi usage  
+
+
+## 🔌 Full Hardware Connections (ESP32 IoT Display)
+
+### 🧠 ESP32 DevKit V1 Pin Mapping
+
+-----------------------------------
+🔹 OLED Display (I2C - SSD1306)
+-----------------------------------
+VCC  →  3.3V  
+GND  →  GND  
+SDA  →  GPIO 21  
+SCL  →  GPIO 22  
+
+-----------------------------------
+🌡️ DHT11 Temperature Sensor
+-----------------------------------
+VCC  →  3.3V  
+GND  →  GND  
+DATA →  GPIO 4  
+
+(Note: Add 10k pull-up resistor between DATA and VCC if not prebuilt)
+
+-----------------------------------
+🔔 Buzzer
+-----------------------------------
+Positive (+) → GPIO 2  
+Negative (-) → GND  
+
+-----------------------------------
+🔋 Power Supply Options
+-----------------------------------
+
+Option 1: USB Power  
+→ Directly power ESP32 via USB cable  
+
+Option 2: 3.7V Li-ion Battery  
+
+Battery (+) → TP4056 B+  
+Battery (-) → TP4056 B-  
+
+TP4056 OUT+ → ESP32 5V (VIN)  
+TP4056 OUT- → ESP32 GND  
+
+(Recommended: Use a boost converter if voltage drops under load)
+
+-----------------------------------
+🧩 Assembly
+-----------------------------------
+All components are connected using a breadboard and jumper wires for easy prototyping and testing.
+
+-----------------------------------
+⚠️ Important Notes
+-----------------------------------
+• All components must share a COMMON GND  
+• Use 3.3V (NOT 5V) for OLED and DHT11  
+• ESP32 GPIO pins are 3.3V logic  
+• Ensure stable power supply for WiFi usage  
