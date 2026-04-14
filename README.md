@@ -104,10 +104,6 @@ A compact IoT-based display system built using ESP32 that shows real-time temper
 5. Power the device
 
 
-
-
-## 🔌 Full Hardware Connections (ESP32 IoT Display)
-
 ### 🧠 ESP32 DevKit V1 Pin Mapping
 
 -----------------------------------
